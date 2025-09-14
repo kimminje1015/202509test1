@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.ClickLogMapper">
+
+  <resultMap id="ClickLogResult" type="com.example.demo.domain.ClickLog">
+    <id property="id" column="ID"/>
+    <result property="label" column="LABEL"/>
+    <result property="createdAt" column="CREATED_AT"/>
+  </resultMap>
+
+  <insert id="insert" parameterType="string">
+    INSERT INTO CLICK_LOG (LABEL, CREATED_AT)
+    VALUES (#{label}, CURRENT_TIMESTAMP)
+  </insert>
+
+  <select id="findAll" resultMap="ClickLogResult">
+    SELECT ID, LABEL, CREATED_AT
+    FROM CLICK_LOG
+    ORDER BY ID DESC
+  </select>
+
+</mapper>

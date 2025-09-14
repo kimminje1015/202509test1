@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/buttondb;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  thymeleaf:
+    cache: false
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.demo.domain
+
+logging:
+  level:
+    com.example.demo: DEBUG
+    org.mybatis: DEBUG
+    jdbc.sqlonly: DEBUG
+
+# Async executor tuning (optional)
+app:
+  async:
+    core-pool-size: 2
+    max-pool-size: 8
+    queue-capacity: 1000
+    await-termination-seconds: 10
