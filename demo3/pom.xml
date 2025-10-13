@@ -20,24 +20,12 @@
         <artifactId>mybatis</artifactId>
         <version>3.5.15</version>
     </dependency>
-    <!--  MyBatis랑 Spring 통합  -->
-<!--    <dependency>-->
-<!--        <groupId>org.mybatis</groupId>-->
-<!--        <artifactId>mybatis-spring</artifactId>-->
-<!--        <version>2.1.0</version>-->
-<!--    </dependency>-->
-    <!--  Spring  -->
-<!--    <dependency>-->
-<!--        <groupId>org.springframework</groupId>-->
-<!--        <artifactId>spring-jdbc</artifactId>-->
-<!--        <version>3.2.5.RELEASE</version>-->
-<!--    </dependency>-->
     <!-- Oracle JDBC Driver (외부에서 직접 추가 필요, maven repo에는 없음) -->
-<!--    <dependency>-->
-<!--        <groupId>com.oracle.database.jdbc</groupId>-->
-<!--        <artifactId>ojdbc8</artifactId>-->
-<!--        <version>21.9.0.0</version>-->
-<!--    </dependency>-->
+    <dependency>
+        <groupId>com.oracle.database.jdbc</groupId>
+        <artifactId>ojdbc8</artifactId>
+        <version>21.9.0.0</version>
+    </dependency>
 </dependencies>
 
 </project>
